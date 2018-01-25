@@ -12,8 +12,9 @@ CREATE TABLE course (
 );
 CREATE TABLE section (
   section_number char(1),
-  course_id varchar(50) REFERENCES course,
-  CONSTRAINT valid_section CHECK (section_number in ('A','B','C','D'))
+  course_id varchar(50) REFERENCES course ON DELETE CASCADE,
+  CONSTRAINT valid_section CHECK (section_number in ('A','B','C','D')),
+  CONSTRAINT course_section_pk PRIMARY KEY(section_number,course_id)
 );
 CREATE TABLE registers (
   student_id varchar(50) REFERENCES student ON DELETE CASCADE,
