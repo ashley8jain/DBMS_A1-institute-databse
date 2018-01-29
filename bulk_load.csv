@@ -1,1 +1,0 @@
-COPY registers(student_id,course_id) FROM '/Users/ashleyjain/Desktop/github/tuples.csv' DELIMITERS ',' CSV HEADER;
