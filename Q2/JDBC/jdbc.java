@@ -15,11 +15,11 @@ public class jdbc {
       Class.forName("org.postgresql.Driver");
 
       //Open a connection
-      System.out.println("Connecting to database...");
+      // System.out.println("Connecting to database...");
       conn = DriverManager.getConnection(DB_URL,USER,PASS);
 
       //Create query statement
-      System.out.println("Creating statement...");
+      // System.out.println("Creating statement...");
       String query = "INSERT INTO registers(student_id,course_id) VALUES (?,?)";
       PreparedStatement ps = conn.prepareStatement(query);
 
@@ -62,6 +62,6 @@ public class jdbc {
       e.printStackTrace();
     }
 
-    System.out.println("END!!");
+    // System.out.println("END!!");
   }
 }
