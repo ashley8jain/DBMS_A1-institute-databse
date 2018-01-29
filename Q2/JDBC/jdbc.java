@@ -4,7 +4,7 @@ import java.util.*;
 
 public class jdbc {
   public static void main(String[] args) throws Exception {
-    System.out.println("hello");
+
     String DB_URL = "jdbc:postgresql://localhost:5432/assign1";
 
     String USER = "postgres";
@@ -24,7 +24,7 @@ public class jdbc {
       PreparedStatement ps = conn.prepareStatement(query);
 
       //Read csv file
-      String fileName= "../tuples.csv";
+      String fileName= "../../datas/tuples.csv";
       File file= new File(fileName);
       List<List<String>> tuples = new ArrayList<>();
       Scanner inputStream;
@@ -62,6 +62,6 @@ public class jdbc {
       e.printStackTrace();
     }
 
-    System.out.println("Goodbye!");
+    System.out.println("END!!");
   }
 }
